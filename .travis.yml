@@ -2,7 +2,6 @@ language: perl
 install: cpanm --notest Digest::SHA1
 script: prove -l t
 perl:
-  - "5.8"
   - "5.10"
   - "5.12"
   - "5.14"
