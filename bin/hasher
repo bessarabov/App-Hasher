@@ -5,6 +5,7 @@ use warnings FATAL => 'all';
 use feature 'say';
 use utf8;
 use open qw(:std :utf8);
+use Encode qw(decode_utf8);
 
 # PODNAME: hasher
 
@@ -93,6 +94,8 @@ sub main {
     };
 
     foreach my $argument (@ARGV) {
+
+        $argument = decode_utf8($argument);
 
         next if -d $argument;
 
